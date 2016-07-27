@@ -58,11 +58,14 @@ public static int[] getLIS(int[] x) {
 ```
 
 > Longest Common Sequence  典型二维DP    
+
+```
 - State: f[i][j]表示前s1前i个元素和s2前几个元素最长的公共序列是多少  
 - Function: f[i][j] = f[i - 1][j - 1] + 1 //if s1[i] == s[j];  
-				  = Math.max(f[i - 1][j], f[i][j - 1])  
+				    = Math.max(f[i - 1][j], f[i][j - 1])  
 - Initialization: f[0][j] = 0 f[i][0] = 0  
 - Answer: f[m][n]  
+```
 
 ```java
 public class Solution {
