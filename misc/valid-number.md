@@ -1,4 +1,4 @@
-> [Validate if a given string is numeric.](https://oj.leetcode.com/problems/text-justification/)
+> [Validate if a given string is numeric.](https://leetcode.com/problems/valid-number/)
 
 ```
 Some examples:
@@ -12,111 +12,64 @@ You should gather all requirements up front before implementing one.
 ```
 
 
-[思路题解来自](http://blog.csdn.net/fightforyourdream/article/details/12900751)  
+[思路题解来自](https://discuss.leetcode.com/topic/9490/clear-java-solution-with-ifs)  
+We start with trimmed string. 
+- If we see [0-9] we reset the number flags.
+- We can only see '.' If we didn't see 'e' or '.'  
+- We can only see 'e' if we didn't see 'e' but we did see a number. We reset numberAfterE flag.  
+- We can only see '+' and '-' in the beginning and after an 'e'
+any other character break the validation.  
+- At the end it is only valid if there was at least 1 number and if we did see an 'e' then a number after it as well.  
 
-正则表达式版：  
+```
+So basically the number should match this regular expression:
+[-+]?[0-9]*(.[0-9]+)?(e[-+]?[0-9]+)?
+``` 
 
 ```java
 public boolean isNumber(String s) {
-    if(s.trim().isEmpty()){  
-        return false;  
-    }  
     String regex = "[-+]?(\\d+\\.?|\\.\\d+)\\d*(e[-+]?\\d+)?";  
     if(s.trim().matches(regex)){  
         return true;  
-    }else{  
-        return false;  
-    }  
+    }
+    return false;
 }
 ```
 
-常规解法：
+分类讨论，常规解法：
 
 ```java
 public static boolean isNumber(String s) {
-    int i = 0;
-    while(s.charAt(i) == ' '){    // 移除前导whitespace
-        i++;
-        if(i >= s.length()){
-            return false;
-        }
-    }
-    if(s.charAt(i)=='+' || s.charAt(i)=='-'){    // 忽略符号位
-        i++;
-    }
-    int j = s.length()-1;
-    while(s.charAt(j) == ' '){    // 移除后缀whitespace
-        j--;
-    }
-    if(i <= j){
-        s = s.substring(i, j+1);
-    }else{
-        return false;
-    }
+    char[] arr = s.trim().toCharArray();
     
-    int dot = -1;    // 记录点的位置
-    int ee = -1;    // 记录e的位置
-    for(i=0; i<s.length(); i++){
-        if(dot==-1 && s.charAt(i)=='.'){
-            dot = i;
-        }else if(ee==-1 && s.charAt(i)=='e'){
-            ee = i;
-            if(i+1<s.length() && (s.charAt(i+1)=='-' || s.charAt(i+1)=='+')){
-                i++;
-            }
-        }else{
-            if(Character.isDigit(s.charAt(i))){
-                continue;
-            }else{
-                return false;
-            }
-        }
+    boolean dot = false;
+    boolean e = false;
+    boolean num = false;
+    boolean numAfterE = true;//default true for non 'e' case
+    for (int i = 0; i < arr.length; i++) {
+    	if (arr[i] >= '0' && arr[i] <= '9') {
+    		num = true;
+    		numAfterE = true;
+    	} else if (arr[i] == '.') {
+    		if (dot || e) {
+    			return false;
+    		}
+    		dot = true;
+    	} else if (arr[i] == 'e') {
+    		if (!num || e) {
+    			return false;
+    		}
+    		e = true;
+    		numAfterE = false;
+    	} else if (arr[i] == '+' || arr[i] == '-'){
+    		if (i != 0 && arr[i - 1] != 'e') {
+    			return false;
+    		}
+    	} else {
+    		return false;
+    	}
     }
-    
-    //xxx.xxexx
-    String startStr, midStr, lastStr;
-    if(dot==-1 && ee==-1){    //xxx  
-        startStr = s;    // xxx
-        if(startStr.length()<1){
-            return false;
-        }
-    }else if(dot!=-1 && ee==-1){    //xxx.yyy  
-        startStr = s.substring(0, dot);    // xxx
-        midStr = s.substring(dot+1);        // yyy
-        if(startStr.length()<1 && midStr.length()<1){
-            return false;
-        }
-    }else if(dot==-1 && ee!=-1){    // xxxeyyy
-        startStr = s.substring(0, ee);    // xxx
-        if(startStr.length()<1){
-            return false;
-        }
-        if(ee+1<s.length() && (s.charAt(ee+1)=='-' || s.charAt(ee+1)=='+')){// xxxe-zz
-            lastStr = s.substring(ee+2);    // zz
-        }else{
-            lastStr = s.substring(ee+1);
-        }
-        if(lastStr.length() < 1){
-            return false;
-        }
-    }else{        //xxx.yyezz
-        if(dot>ee){        // 位置不对
-            return false;
-        }
-        startStr = s.substring(0, dot);    // xxx
-        midStr = s.substring(dot+1, ee);    // yy
-        if(startStr.length()<1 && midStr.length()<1){
-            return false;
-        }
-        if(ee+1<s.length() && (s.charAt(ee+1)=='-' || s.charAt(ee+1)=='+')){
-            lastStr = s.substring(ee+2);    // zz
-        }else{
-            lastStr = s.substring(ee+1);
-        }
-        if(lastStr.length() < 1){
-            return false;
-        }
-    }
-    return true;
+    //At least 1 num, if 'e' exist, must be with at least 1 num after 'e'
+    return num && numAfterE;
 }
 ```
