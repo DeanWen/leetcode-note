@@ -3,33 +3,32 @@
 Corner case： 如果一个点为令一个点的祖先，那么这个点就是LCA  
 
 ```java
-public Node getLCA(Node t, Node u, Node v){
-	if (t == null) {
+public TreeNode getLCA(TreeNode root, TreeNode node1, TreeNode node2){
+	if (root == null || node1 == null || node2 == null) {
         return null;
     }
 
-    if (t.val < u.val && t.val < v.val) {
-        return getLCA(t.right, u, v);
-    }else if (t.val > u.val && t.val > v.val) {
-        return getLCA(t.left, u, v);
-    }else {
-        return t;
+    if (root.val < node1.val && root.val < node2.val) {
+        return getLCA(root.right, node1, node2);
+    }else if (root.val > node1.val && root.val > node2.val) {
+        return getLCA(root.left, node1, node2);
     }
-
+    
+    return root;
 }
 ```
 
 如果不是BST，看看提不提供parent指针。Divide & Conquer
 
 ```java
-public Node getLCA(Node root, Node node1, Node node2){
+public TreeNode getLCA(TreeNode root, TreeNode node1, TreeNode node2){
     if(root == null)
         return null
     if(root == node1 || root == node2)
         return root;
     
-    Node left = getLCA(root.left, node1, node2);
-    Node right = getLCA(root.right, node1, node2);
+    TreeNode left = getLCA(root.left, node1, node2);
+    TreeNode right = getLCA(root.right, node1, node2);
     
     if(left != null && right != null) {
         return root;
