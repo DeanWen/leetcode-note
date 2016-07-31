@@ -1,6 +1,10 @@
 ##MergeSort List Related Summary
 
 **常见题型** 
+- [Sort a linked list in O(n log n) time using constant space complexity](https://oj.leetcode.com/problems/sort-list/) 
+
+首先时间复杂度为O(nlogn)的排序算法就3种， merge sort，quick sort，heap sort。这道题用来模拟merge sort routine, heap sort 不是constant space, 由于是linked list, quick sort 不适用， 因为sort object不稳定。
+
 - merge sorted linked list in aces/decs order
 > 考点：mergesort的merge部分
 	-  **注意 是否有duplicates**
@@ -35,11 +39,11 @@ public ListNode merge (ListNode l1, ListNode l2) {
 	-  **利用快慢指针找中点，分别归并排左右**
 
 ``` java
-public ListNode mergeSort (ListNode l1, ListNode l2) {
-	return merge(sort(l1), sort(l2));
+public ListNode merge2UnsortedList (ListNode l1, ListNode l2) {
+	return merge(mergeSort(l1), mergeSort(l2));
 }
 
-public ListNode sort (ListNode head) {
+public ListNode mergeSort (ListNode head) {
 	if (head == null || head.next == null) {
 		return head;
 	}
@@ -54,7 +58,7 @@ public ListNode sort (ListNode head) {
 	ListNode right = slow.next;
 	slow.next = null;
 
-	return merge(sort(left), sort(right));
+	return merge(mergeSort(left), mergeSort(right));
 }
 ```
 
