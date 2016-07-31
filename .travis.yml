@@ -6,10 +6,7 @@ branches:
   - master
 install: npm install -g gitbook-cli
 before_script: gitbook install
-script: gitbook build
-after_success:
-- chmod ugo+x deploy.sh
-- bash deploy.sh
+script: bash deploy.sh
 env:
   global:
   - GH_REF: github.com/DeanWen/leetcode-note.git
