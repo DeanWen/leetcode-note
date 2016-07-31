@@ -52,14 +52,14 @@ public List<List<Integer>> fourSum (int[] nums, int target) {
 					while(p < q && nums[q] == nums[q - 1]) q--;
 					p++;
 					q--;
-				}
-			}
-		}else if (sum < target) {
-			p++;
-		}esle {
-			q--;
-		}
-	}
+				}else if (sum < target) {
+                    p++;
+                }else {
+                    q--;
+                }
+            }
+        }
+    }
 	return res;
 }
 ```
