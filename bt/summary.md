@@ -9,7 +9,7 @@
 -	Two Queue
 -	One Queue + One dummyNode
 -	One Queue (利用queue.size()移动指针)
-	-	e.g. Binary Tree Level Order Traversal
+	-	e.g. [Binary Tree Level Order Traversal](https://oj.leetcode.com/problems/binary-tree-level-order-traversal/)
 
 ```java
 public List<List<Integer>> bfs (TreeNode root) {

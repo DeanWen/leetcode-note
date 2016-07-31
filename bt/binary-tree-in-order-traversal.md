@@ -24,10 +24,9 @@ public class Solution {
 }
 ```
 
-非递归Iterative Method  
+非递归Iterative  
 in order顺序是 left root right     
 如果当前root不为空，压入stack，令其为左孩子，如果其左孩子为空，就pop root，输出root.val, 令其等于有孩子。  
-为什么？  
 
 
 ```java
@@ -55,3 +54,9 @@ public class Solution {
     }
 }
 ```
+
+
+相似题目：
+>[Given a binary tree, return the postorder traversal of its nodes' values.](https://oj.leetcode.com/problems/binary-tree-postorder-traversal/)  
+
+>[Given a binary tree, return the preorder traversal of its nodes' values.](https://oj.leetcode.com/problems/binary-tree-preorder-traversal/)  
