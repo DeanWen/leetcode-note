@@ -1,6 +1,9 @@
 # Summary
 
 * [Math](math/math.md)
+* [String]()
+    * [Substring](string/substring-related.md)
+    * [Test Justification](string/text-justification.md)
 * [Sort](sort/introduction.md)
 	* [Merge-Sort](sort/merge-sort.md)
 * [Binary Search](bs/binary-search.md)
@@ -22,6 +25,7 @@
     * [Word Search](dfs/word-search.md)
 * [BFS]()
     * [Anagrams](bfs/anagrams.md)
+    * [Word Ladder](bfs/word-ladder.md)
 * [Dynamic Programming](dp/introduction.md)
 	 * [Introduction](dp/summary.md)
 	 * [LIS/LCS](dp/LIS-LCS.md)
@@ -39,4 +43,3 @@
 * [Misc]()
     * [Two Sum](misc/two-sum.md)
     * [Valid Number](misc/valid-number.md)
-    * [Test Justification](misc/text-justification.md)
