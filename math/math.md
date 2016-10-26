@@ -74,10 +74,11 @@ public int countPrimeNumberLessthan(int num) {
 		}
 	}
 	//count prime number
+    int count = 0;
 	for (int i = 2; i < num; i++) {
-		res = !nonPrime[i] ? res + 1 : res;
+		count = !nonPrime[i] ? count + 1 : count;
 	}
-	return res;
+	return count;
 }
 ```
 
