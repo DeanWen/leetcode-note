@@ -4,4 +4,4 @@
 
 Somehow I need to start leetcoding again. In this book, I will write down my thoughts, notes, and summary during leetcode practice. Thanks to multiple resources, it might be missing the reference. If you see so, please don't hesitate to send email, comment, issue, pull request, or whatever to let me know. I will update at first convenience.
 
-Dean W. | A Daydreamer | me@deanwen.com | http://deanwen.com
+Dean W. | A Dream Maker | me@deanwen.com | http://deanwen.com
