@@ -1,0 +1,989 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>LIS/LCS · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="decode-ways.html" />
+    
+    
+    <link rel="prev" href="summary.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../math/math.html">
+            
+                <a href="../math/math.html">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    String
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../string/substring-related.html">
+            
+                <a href="../string/substring-related.html">
+            
+                    
+                    Substring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../string/text-justification.html">
+            
+                <a href="../string/text-justification.html">
+            
+                    
+                    Test Justification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../sort/introduction.html">
+            
+                <a href="../sort/introduction.html">
+            
+                    
+                    Sort
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../sort/merge-sort.html">
+            
+                <a href="../sort/merge-sort.html">
+            
+                    
+                    Merge-Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../bs/binary-search.html">
+            
+                <a href="../bs/binary-search.html">
+            
+                    
+                    Binary Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../bs/median-of-two-sorted-arrays.html">
+            
+                <a href="../bs/median-of-two-sorted-arrays.html">
+            
+                    
+                    Median of Two Sorted Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../bt/summary.html">
+            
+                <a href="../bt/summary.html">
+            
+                    
+                    Binary Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../bt/binary-tree-in-order-traversal.html">
+            
+                <a href="../bt/binary-tree-in-order-traversal.html">
+            
+                    
+                    In Order Traversal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../bt/lowest-common-ancestor.html">
+            
+                <a href="../bt/lowest-common-ancestor.html">
+            
+                    
+                    Lowest Common Ancestor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../bt/binary-tree-zigzag-level-order-traversal.html">
+            
+                <a href="../bt/binary-tree-zigzag-level-order-traversal.html">
+            
+                    
+                    Zigzag LevelOrder Traversal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../bt/construct-binary-tree-from-inorder-and-postorder-traversal.html">
+            
+                <a href="../bt/construct-binary-tree-from-inorder-and-postorder-traversal.html">
+            
+                    
+                    Construct from Inorder and Post order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../bt/construct-binary-tree-from-inorder-and-preorder-traversal.html">
+            
+                <a href="../bt/construct-binary-tree-from-inorder-and-preorder-traversal.html">
+            
+                    
+                    Construct from Inorder and Pre order
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../dfs/introduction.html">
+            
+                <a href="../dfs/introduction.html">
+            
+                    
+                    DFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../dfs/permutation-combination.html">
+            
+                <a href="../dfs/permutation-combination.html">
+            
+                    
+                    Permutation/Combination
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../dfs/combination-sum.html">
+            
+                <a href="../dfs/combination-sum.html">
+            
+                    
+                    Combination Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../dfs/generate-parenthese.html">
+            
+                <a href="../dfs/generate-parenthese.html">
+            
+                    
+                    Generate Parenthese
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../dfs/n-queens.html">
+            
+                <a href="../dfs/n-queens.html">
+            
+                    
+                    N-Queens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../dfs/sudoku-solver.html">
+            
+                <a href="../dfs/sudoku-solver.html">
+            
+                    
+                    Sudoku Solver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../dfs/word-break-ii.html">
+            
+                <a href="../dfs/word-break-ii.html">
+            
+                    
+                    Word Break II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../dfs/word-search.html">
+            
+                <a href="../dfs/word-search.html">
+            
+                    
+                    Word Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    BFS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../bfs/anagrams.html">
+            
+                <a href="../bfs/anagrams.html">
+            
+                    
+                    Anagrams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../bfs/word-ladder.html">
+            
+                <a href="../bfs/word-ladder.html">
+            
+                    
+                    Word Ladder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.2" data-path="LIS-LCS.html">
+            
+                <a href="LIS-LCS.html">
+            
+                    
+                    LIS/LCS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="decode-ways.html">
+            
+                <a href="decode-ways.html">
+            
+                    
+                    Decode Ways
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="word-break.html">
+            
+                <a href="word-break.html">
+            
+                    
+                    Word Break
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="distinct-subsequences.html">
+            
+                <a href="distinct-subsequences.html">
+            
+                    
+                    Distinct Subsequences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="interleaving-string.html">
+            
+                <a href="interleaving-string.html">
+            
+                    
+                    Interleaving String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="jump-game.html">
+            
+                <a href="jump-game.html">
+            
+                    
+                    Jump Game
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="maximum-subarray.html">
+            
+                <a href="maximum-subarray.html">
+            
+                    
+                    Maximum Subarray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="min-path-sum.html">
+            
+                <a href="min-path-sum.html">
+            
+                    
+                    Min Path Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="palindrome-partition-ii.html">
+            
+                <a href="palindrome-partition-ii.html">
+            
+                    
+                    Palindrome Partition II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="pascal-triangle.html">
+            
+                <a href="pascal-triangle.html">
+            
+                    
+                    Pascal Triangle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="set-zero-to-matrix.html">
+            
+                <a href="set-zero-to-matrix.html">
+            
+                    
+                    Set Zero to Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="triangle.html">
+            
+                <a href="triangle.html">
+            
+                    
+                    Triangle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.14" data-path="wildcard-matching.html">
+            
+                <a href="wildcard-matching.html">
+            
+                    
+                    Wild Card Match
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Misc
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../misc/two-sum.html">
+            
+                <a href="../misc/two-sum.html">
+            
+                    
+                    Two Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../misc/valid-number.html">
+            
+                <a href="../misc/valid-number.html">
+            
+                    
+                    Valid Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../misc/print-matrix-diagonally">
+            
+                <span>
+            
+                    
+                    Print Matrix Diagonally
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >LIS/LCS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>Longest Increasing Sequence &#x5178;&#x578B;&#x4E00;&#x7EF4;DP    </p>
+</blockquote>
+<ul>
+<li>State: f[i]&#x8868;&#x793A;&#x524D;i&#x4E2A;&#x5143;&#x7D20;&#x6700;&#x957F;&#x7684;&#x9012;&#x589E;&#x5B50;&#x5E8F;&#x5217;&#x662F;&#x591A;&#x5C11;  </li>
+<li>Function: f[i] = Math.max(f[0 .. j .. i - 1]) + 1 //if num[i] &gt; num[j];  </li>
+<li>Initialization: f[0] = 1;  </li>
+<li>Answer: f[n]  </li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">lis</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] num)</span> </span>{
+    <span class="hljs-keyword">if</span> (num == <span class="hljs-keyword">null</span> || num.length == <span class="hljs-number">0</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[num.length];
+    dp[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; num.length; i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) {
+            <span class="hljs-comment">//MAX(dp[0 .. i - 1])</span>
+            <span class="hljs-keyword">if</span> (num[j] &lt; num[i] &amp;&amp; dp[j] + <span class="hljs-number">1</span> &gt; dp[i]) {
+                dp[i] = dp[j] + <span class="hljs-number">1</span>;
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> dp[num.length - <span class="hljs-number">1</span>];
+}
+<span class="hljs-comment">//print the longest increasing sequence</span>
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] getLIS(<span class="hljs-keyword">int</span>[] x) {
+    <span class="hljs-keyword">int</span> n = x.length;
+    <span class="hljs-keyword">int</span>[] len = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+    Arrays.fill(len, <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">int</span>[] pred = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+    Arrays.fill(pred, -<span class="hljs-number">1</span>);
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i++) {
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) {
+            <span class="hljs-keyword">if</span> (x[j] &lt; x[i] &amp;&amp; len[i] &lt; len[j] + <span class="hljs-number">1</span>) {
+                  len[i] = len[j] + <span class="hljs-number">1</span>;
+                  pred[i] = j;
+            }
+          }
+    }
+
+    <span class="hljs-keyword">int</span> bi = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; n; i++) {
+          <span class="hljs-keyword">if</span> (len[bi] &lt; len[i]) {
+            bi = i;
+          }
+    }
+
+    <span class="hljs-keyword">int</span> cnt = len[bi];
+    <span class="hljs-keyword">int</span>[] res = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[cnt];
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = bi; i != -<span class="hljs-number">1</span>; i = pred[i]) {
+          res[--cnt] = x[i];
+    }
+
+    <span class="hljs-keyword">return</span> res;
+  }
+</code></pre>
+<blockquote>
+<p>Longest Common Sequence  &#x5178;&#x578B;&#x4E8C;&#x7EF4;DP    </p>
+</blockquote>
+<pre><code>- State: f[i][j]&#x8868;&#x793A;&#x524D;s1&#x524D;i&#x4E2A;&#x5143;&#x7D20;&#x548C;s2&#x524D;&#x51E0;&#x4E2A;&#x5143;&#x7D20;&#x6700;&#x957F;&#x7684;&#x516C;&#x5171;&#x5E8F;&#x5217;&#x662F;&#x591A;&#x5C11;  
+- Function: f[i][j] = f[i - 1][j - 1] + 1 //if s1[i] == s[j];  
+                    = Math.max(f[i - 1][j], f[i][j - 1])  
+- Initialization: f[0][j] = 0 f[i][0] = 0  
+- Answer: f[m][n]
+</code></pre><pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-comment">//&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+        <span class="hljs-keyword">int</span>[] x = {<span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>};
+        <span class="hljs-keyword">int</span>[] y = {<span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>, <span class="hljs-number">0</span>};
+        String s1 = <span class="hljs-string">&quot;15423760&quot;</span>;
+        String s2 = <span class="hljs-string">&quot;27135460&quot;</span>;
+        System.out.println(lcs(s1, s2));
+        System.out.println(Arrays.toString(getLCS(x,y)));
+    }
+
+    <span class="hljs-comment">//Longest Common Sequence</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">lcs</span><span class="hljs-params">(String s1, String s2)</span> </span>{
+        <span class="hljs-keyword">int</span> m = s1.length();
+        <span class="hljs-keyword">int</span> n = s2.length();
+        <span class="hljs-keyword">int</span>[][] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[m + <span class="hljs-number">1</span>][n + <span class="hljs-number">1</span>];
+        <span class="hljs-comment">//s2 is empty</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= m; i++) {
+            dp[i][<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-comment">//s1 is empty</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt;= n; j++) {
+            dp[<span class="hljs-number">0</span>][j] = <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-comment">//dp body</span>
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= m; i++) {
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= n; j++) {
+                <span class="hljs-keyword">if</span> (s1.charAt(i - <span class="hljs-number">1</span>) == s2.charAt(j - <span class="hljs-number">1</span>)) {
+                    dp[i][j] = dp[i - <span class="hljs-number">1</span>][j - <span class="hljs-number">1</span>] + <span class="hljs-number">1</span>;
+                }<span class="hljs-keyword">else</span> {
+                    dp[i][j] = Math.max(dp[i - <span class="hljs-number">1</span>][j], dp[i][j - <span class="hljs-number">1</span>]);
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> dp[m][n];
+    }
+
+    <span class="hljs-comment">//Print Longest Common Sequence</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[] getLCS(<span class="hljs-keyword">int</span>[] x, <span class="hljs-keyword">int</span>[] y) {
+        <span class="hljs-keyword">int</span> m = x.length;
+        <span class="hljs-keyword">int</span> n = y.length;
+        <span class="hljs-keyword">int</span>[][] lcs = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[m + <span class="hljs-number">1</span>][n + <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++) {
+          <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+            <span class="hljs-keyword">if</span> (x[i] == y[j]) {
+              lcs[i + <span class="hljs-number">1</span>][j + <span class="hljs-number">1</span>] = lcs[i][j] + <span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> {
+              lcs[i + <span class="hljs-number">1</span>][j + <span class="hljs-number">1</span>] = Math.max(lcs[i + <span class="hljs-number">1</span>][j], lcs[i][j + <span class="hljs-number">1</span>]);
+            }
+          }
+        }
+        <span class="hljs-keyword">int</span> cnt = lcs[m][n];
+        <span class="hljs-keyword">int</span>[] res = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[cnt];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = m - <span class="hljs-number">1</span>, j = n - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span> &amp;&amp; j &gt;= <span class="hljs-number">0</span>; ) {
+          <span class="hljs-keyword">if</span> (x[i] == y[j]) {
+            res[--cnt] = x[i];
+            --i;
+            --j;
+          } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (lcs[i + <span class="hljs-number">1</span>][j] &gt; lcs[i][j + <span class="hljs-number">1</span>]) {
+            --j;
+          } <span class="hljs-keyword">else</span> {
+            --i;
+          }
+        }
+        <span class="hljs-keyword">return</span> res;
+      }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="summary.html" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="decode-ways.html" class="navigation navigation-next " aria-label="Next page: Decode Ways">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"LIS/LCS","level":"1.9.2","depth":2,"next":{"title":"Decode Ways","level":"1.9.3","depth":2,"path":"dp/decode-ways.md","ref":"dp/decode-ways.md","articles":[]},"previous":{"title":"Introduction","level":"1.9.1","depth":2,"path":"dp/summary.md","ref":"dp/summary.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["disqus"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"dianwen"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dp/LIS-LCS.md","mtime":"2016-10-30T04:10:50.791Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-30T04:12:12.416Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

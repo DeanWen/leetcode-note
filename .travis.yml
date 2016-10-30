@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '5'
+branches:
+  only:
+  - master
+install: npm install -g gitbook-cli
+before_script: gitbook install
+script: bash deploy.sh
+env:
+  global:
+  - GH_REF: github.com/DeanWen/leetcode-note.git
+  - secure: j/g754F5Mrd+yh51uezmt5KEjHha9+HkGGYHzy7srW/S+1tbUARe2r0s6XvW8Dls9jKtaGq2b6aEizuz6bISizB+hiyO0JBHcPdXHfC9kzzvWH1ohMYj16PrultoGsF7BCGdVko06GkFQIi+KmmJGWJxrGqNB9Z2uSPSmk8QXjIMXHSJNyRLL+YqtqCKtv6xO9Yhwp9x3a+DkLaH/rKWiXgh3q+RQr0z2ICtelIcDjtRyYaNVrWiG4xrkO2GAmf2ACh32s4F6AASkbhYQrYSN6VzpJPBI2Gi0Gu32vf59CXJZt9NG75q11yuTsW9KDmbSicul0VcmTKjeHGMeFif8AuQqpF6PiLJkGUGB+4YjUfxpvd1Uws4EljU5dhPdX918xViQBDAG3otNAsQfjKHs61Q0mKDoukdPOt6D8DkFR+T69QbB2sdBGjhkCySN0YanT13khsY+q1AP/02OTvEcFGjMCDW/JLAz86pF+X44SBdYdq0+oTAO0/ISG42U00Mi4nQZkuSNIjnjf92lpsl0DaOSdos2GWpWFBnyM/EwYzZ9iW3xaSbsCgr4mW4O6QtlW7YJKhfbDVNcBNmjHtXUFy62bFQ714yM+vH304PYpF6cAmjH3/bswD606MhW78DNb3ZIYZHK9RCrFQy60bpwZBmQIn/aX+FAL+GmOvCv14=

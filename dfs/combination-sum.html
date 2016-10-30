@@ -1,0 +1,954 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Combination Sum · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="generate-parenthese.html" />
+    
+    
+    <link rel="prev" href="permutation-combination.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../math/math.html">
+            
+                <a href="../math/math.html">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    String
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../string/substring-related.html">
+            
+                <a href="../string/substring-related.html">
+            
+                    
+                    Substring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../string/text-justification.html">
+            
+                <a href="../string/text-justification.html">
+            
+                    
+                    Test Justification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../sort/introduction.html">
+            
+                <a href="../sort/introduction.html">
+            
+                    
+                    Sort
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../sort/merge-sort.html">
+            
+                <a href="../sort/merge-sort.html">
+            
+                    
+                    Merge-Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../bs/binary-search.html">
+            
+                <a href="../bs/binary-search.html">
+            
+                    
+                    Binary Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../bs/median-of-two-sorted-arrays.html">
+            
+                <a href="../bs/median-of-two-sorted-arrays.html">
+            
+                    
+                    Median of Two Sorted Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../bt/summary.html">
+            
+                <a href="../bt/summary.html">
+            
+                    
+                    Binary Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../bt/binary-tree-in-order-traversal.html">
+            
+                <a href="../bt/binary-tree-in-order-traversal.html">
+            
+                    
+                    In Order Traversal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../bt/lowest-common-ancestor.html">
+            
+                <a href="../bt/lowest-common-ancestor.html">
+            
+                    
+                    Lowest Common Ancestor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../bt/binary-tree-zigzag-level-order-traversal.html">
+            
+                <a href="../bt/binary-tree-zigzag-level-order-traversal.html">
+            
+                    
+                    Zigzag LevelOrder Traversal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../bt/construct-binary-tree-from-inorder-and-postorder-traversal.html">
+            
+                <a href="../bt/construct-binary-tree-from-inorder-and-postorder-traversal.html">
+            
+                    
+                    Construct from Inorder and Post order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../bt/construct-binary-tree-from-inorder-and-preorder-traversal.html">
+            
+                <a href="../bt/construct-binary-tree-from-inorder-and-preorder-traversal.html">
+            
+                    
+                    Construct from Inorder and Pre order
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    DFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="permutation-combination.html">
+            
+                <a href="permutation-combination.html">
+            
+                    
+                    Permutation/Combination
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1" data-path="combination-sum.html">
+            
+                <a href="combination-sum.html">
+            
+                    
+                    Combination Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="generate-parenthese.html">
+            
+                <a href="generate-parenthese.html">
+            
+                    
+                    Generate Parenthese
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="n-queens.html">
+            
+                <a href="n-queens.html">
+            
+                    
+                    N-Queens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="sudoku-solver.html">
+            
+                <a href="sudoku-solver.html">
+            
+                    
+                    Sudoku Solver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="word-break-ii.html">
+            
+                <a href="word-break-ii.html">
+            
+                    
+                    Word Break II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="word-search.html">
+            
+                <a href="word-search.html">
+            
+                    
+                    Word Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    BFS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../bfs/anagrams.html">
+            
+                <a href="../bfs/anagrams.html">
+            
+                    
+                    Anagrams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../bfs/word-ladder.html">
+            
+                <a href="../bfs/word-ladder.html">
+            
+                    
+                    Word Ladder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../dp/introduction.html">
+            
+                <a href="../dp/introduction.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../dp/summary.html">
+            
+                <a href="../dp/summary.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../dp/LIS-LCS.html">
+            
+                <a href="../dp/LIS-LCS.html">
+            
+                    
+                    LIS/LCS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../dp/decode-ways.html">
+            
+                <a href="../dp/decode-ways.html">
+            
+                    
+                    Decode Ways
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../dp/word-break.html">
+            
+                <a href="../dp/word-break.html">
+            
+                    
+                    Word Break
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../dp/distinct-subsequences.html">
+            
+                <a href="../dp/distinct-subsequences.html">
+            
+                    
+                    Distinct Subsequences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../dp/interleaving-string.html">
+            
+                <a href="../dp/interleaving-string.html">
+            
+                    
+                    Interleaving String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../dp/jump-game.html">
+            
+                <a href="../dp/jump-game.html">
+            
+                    
+                    Jump Game
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../dp/maximum-subarray.html">
+            
+                <a href="../dp/maximum-subarray.html">
+            
+                    
+                    Maximum Subarray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../dp/min-path-sum.html">
+            
+                <a href="../dp/min-path-sum.html">
+            
+                    
+                    Min Path Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../dp/palindrome-partition-ii.html">
+            
+                <a href="../dp/palindrome-partition-ii.html">
+            
+                    
+                    Palindrome Partition II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../dp/pascal-triangle.html">
+            
+                <a href="../dp/pascal-triangle.html">
+            
+                    
+                    Pascal Triangle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../dp/set-zero-to-matrix.html">
+            
+                <a href="../dp/set-zero-to-matrix.html">
+            
+                    
+                    Set Zero to Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../dp/triangle.html">
+            
+                <a href="../dp/triangle.html">
+            
+                    
+                    Triangle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.14" data-path="../dp/wildcard-matching.html">
+            
+                <a href="../dp/wildcard-matching.html">
+            
+                    
+                    Wild Card Match
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Misc
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../misc/two-sum.html">
+            
+                <a href="../misc/two-sum.html">
+            
+                    
+                    Two Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../misc/valid-number.html">
+            
+                <a href="../misc/valid-number.html">
+            
+                    
+                    Valid Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../misc/print-matrix-diagonally">
+            
+                <span>
+            
+                    
+                    Print Matrix Diagonally
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Combination Sum</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p><a href="https://oj.leetcode.com/problems/combination-sum/" target="_blank">Combination Sum</a><br>Given a set of candidate numbers (C) and a target number (T), find all unique combinations in C where the candidate numbers sums to T. The same repeated number may be chosen from C unlimited number of times.</p>
+</blockquote>
+<p>Note:  </p>
+<ul>
+<li>All numbers (including target) will be positive integers.  </li>
+<li>Elements in a combination (a1, a2, &#x2026; , ak) must be in non-descending order. (ie, a1 &#x2264; a2 &#x2264; &#x2026; &#x2264; ak).  </li>
+<li>The solution set must not contain duplicate combinations.</li>
+</ul>
+<pre><code>For example, given candidate set 2,3,6,7 and target 7, 
+A solution set is: 
+[7] 
+[2, 2, 3]
+</code></pre><p>&#x601D;&#x8DEF;&#xFF1A;<br>&#x6B64;&#x9898;&#x5957;&#x7528;&#x6392;&#x5217;&#x7EC4;&#x5408;&#x6A21;&#x7248;&#xFF0C;&#x662F;&#x7528;DFS&#x627E;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x95EE;&#x9898;&#xFF0C;&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x8FD9;&#x9053;&#x9898;&#xFF1A; The same repeated number may be chosen from C unlimited number of times. &#x6240;&#x4EE5;&#xFF0C;&#x6BCF;&#x6B21;&#x8DF3;&#x8FDB;&#x9012;&#x5F52;&#x4E0D;&#x7528;&#x90FD;&#x5F80;&#x540E;&#x632A;&#x4E00;&#x4E2A;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5F53;&#x524D;&#x7684;&#x5143;&#x7D20;&#x5C1D;&#x8BD5;&#x3002;
+&#x540C;&#x65F6;&#xFF0C;&#x8FD9;&#x9053;&#x9898;&#x8FD8;&#x8981;&#x5224;&#x65AD;&#x91CD;&#x590D;&#x89E3;&#x3002;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x89E3;&#x51B3;</p>
+<pre><code class="lang-java"> <span class="hljs-number">1</span>. <span class="hljs-keyword">if</span>(i&gt;<span class="hljs-number">0</span> &amp;&amp; candidates[i] == candidates[i-<span class="hljs-number">1</span>])<span class="hljs-comment">//deal with dupicate</span>
+        <span class="hljs-keyword">continue</span>; 
+
+ <span class="hljs-number">2</span>. <span class="hljs-keyword">if</span>(!result.contains(item)) 
+        result.add(<span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;(item));
+</code></pre>
+<p>&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x5982;&#x4E0B;  </p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; combinationSum(<span class="hljs-keyword">int</span>[] candidates, <span class="hljs-keyword">int</span> target) {
+        List&lt;List&lt;Integer&gt;&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+        List&lt;Integer&gt; item = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+        <span class="hljs-keyword">if</span> (candidates == <span class="hljs-keyword">null</span> || candidates.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> result;
+        }
+
+        Arrays.sort(candidates);
+        helper(result, item, candidates, target, <span class="hljs-number">0</span>);
+        <span class="hljs-keyword">return</span> result;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">helper</span><span class="hljs-params">(List&lt;List&lt;Integer&gt;&gt; result, List&lt;Integer&gt; item, 
+                        <span class="hljs-keyword">int</span>[] candidates, <span class="hljs-keyword">int</span> target, <span class="hljs-keyword">int</span> start)</span> </span>{
+        <span class="hljs-keyword">if</span> (target &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">if</span> (target == <span class="hljs-number">0</span>) {
+            result.add(<span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;(item));
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = start; i &lt; candidates.length; i++) {
+            <span class="hljs-keyword">if</span>(i &gt; <span class="hljs-number">0</span> &amp;&amp; candidates[i] == candidates[i-<span class="hljs-number">1</span>]) {<span class="hljs-comment">//deal with dupicate</span>
+                <span class="hljs-keyword">continue</span>;
+            }
+            item.add(candidates[i]);
+            <span class="hljs-keyword">int</span> newTarget = target - candidates[i];
+            helper(result, item, candidates, newTarget, i);
+            item.remove(item.size() - <span class="hljs-number">1</span>);
+        }
+    }
+}
+</code></pre>
+<p>&#x6B64;&#x9898;&#x8FD8;&#x6709;&#x7684;follow up&#x7248;<a href="https://oj.leetcode.com/problems/combination-sum-ii/" target="_blank">Combination Sum II</a>&#x8981;&#x6C42;&#xFF0C;&#x7EC4;&#x5408;&#x4E2D;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x5C31;&#x6392;&#x9664;&#x4E86;&#x4E4B;&#x524D;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x6B21;&#x4F7F;&#x7528;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x5C31;&#x53EF;&#x4EE5;&#x53C2;&#x7167;&#x5168;&#x6392;&#x5217;&#x7684;&#x6A21;&#x7248;&#x3002;&#x7528;&#x4E00;&#x4E2A;visited[]&#x53BB;&#x6807;&#x8BB0;&#x5143;&#x7D20;&#x662F;&#x5426;&#x88AB;&#x4F7F;&#x7528;&#x8FC7;&#x3002;</p>
+<p>&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x5982;&#x4E0B;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; combinationSum2(<span class="hljs-keyword">int</span>[] candidates, <span class="hljs-keyword">int</span> target) {
+        List&lt;List&lt;Integer&gt;&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;List&lt;Integer&gt;&gt;();
+        List&lt;Integer&gt; item = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+        <span class="hljs-keyword">if</span> (candidates == <span class="hljs-keyword">null</span> || candidates.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> result;
+        }
+
+        <span class="hljs-keyword">boolean</span> visited[] = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[candidates.length];
+        Arrays.fill(visited, <span class="hljs-keyword">false</span>);
+        Arrays.sort(candidates);
+        helper(result, item, candidates, target, <span class="hljs-number">0</span>, visited);
+        <span class="hljs-keyword">return</span> result;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">helper</span><span class="hljs-params">(List&lt;List&lt;Integer&gt;&gt; result, List&lt;Integer&gt; item, 
+                        <span class="hljs-keyword">int</span>[] candidates, <span class="hljs-keyword">int</span> target, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">boolean</span>[] visited)</span> </span>{
+        <span class="hljs-keyword">if</span> (target &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">if</span> (target == <span class="hljs-number">0</span>) {
+            result.add(<span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;(item));
+            <span class="hljs-keyword">return</span>;
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = start; i &lt; candidates.length; i++) {
+            <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">0</span> &amp;&amp; candidates[i] == candidates[i - <span class="hljs-number">1</span>] &amp;&amp; visited[i - <span class="hljs-number">1</span>] == <span class="hljs-keyword">false</span>) {
+                <span class="hljs-keyword">continue</span>;
+            }
+
+            visited[i] = <span class="hljs-keyword">true</span>;
+            item.add(candidates[i]);
+            <span class="hljs-keyword">int</span> newTarget = target - candidates[i];
+            helper(result, item, candidates, newTarget, i + <span class="hljs-number">1</span>, visited);
+            visited[i] = <span class="hljs-keyword">false</span>;
+            item.remove(item.size() - <span class="hljs-number">1</span>);
+        }
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="permutation-combination.html" class="navigation navigation-prev " aria-label="Previous page: Permutation/Combination">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="generate-parenthese.html" class="navigation navigation-next " aria-label="Next page: Generate Parenthese">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Combination Sum","level":"1.7.1","depth":2,"next":{"title":"Generate Parenthese","level":"1.7.2","depth":2,"path":"dfs/generate-parenthese.md","ref":"dfs/generate-parenthese.md","articles":[]},"previous":{"title":"Permutation/Combination","level":"1.7","depth":1,"path":"dfs/permutation-combination.md","ref":"dfs/permutation-combination.md","articles":[{"title":"Combination Sum","level":"1.7.1","depth":2,"path":"dfs/combination-sum.md","ref":"dfs/combination-sum.md","articles":[]},{"title":"Generate Parenthese","level":"1.7.2","depth":2,"path":"dfs/generate-parenthese.md","ref":"dfs/generate-parenthese.md","articles":[]},{"title":"N-Queens","level":"1.7.3","depth":2,"path":"dfs/n-queens.md","ref":"dfs/n-queens.md","articles":[]},{"title":"Sudoku Solver","level":"1.7.4","depth":2,"path":"dfs/sudoku-solver.md","ref":"dfs/sudoku-solver.md","articles":[]},{"title":"Word Break II","level":"1.7.5","depth":2,"path":"dfs/word-break-ii.md","ref":"dfs/word-break-ii.md","articles":[]},{"title":"Word Search","level":"1.7.6","depth":2,"path":"dfs/word-search.md","ref":"dfs/word-search.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["disqus"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"dianwen"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dfs/combination-sum.md","mtime":"2016-10-30T04:10:50.791Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-30T04:12:12.416Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

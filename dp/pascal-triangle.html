@@ -1,0 +1,925 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Pascal Triangle · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="set-zero-to-matrix.html" />
+    
+    
+    <link rel="prev" href="palindrome-partition-ii.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../math/math.html">
+            
+                <a href="../math/math.html">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    String
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../string/substring-related.html">
+            
+                <a href="../string/substring-related.html">
+            
+                    
+                    Substring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../string/text-justification.html">
+            
+                <a href="../string/text-justification.html">
+            
+                    
+                    Test Justification
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../sort/introduction.html">
+            
+                <a href="../sort/introduction.html">
+            
+                    
+                    Sort
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../sort/merge-sort.html">
+            
+                <a href="../sort/merge-sort.html">
+            
+                    
+                    Merge-Sort
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../bs/binary-search.html">
+            
+                <a href="../bs/binary-search.html">
+            
+                    
+                    Binary Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../bs/median-of-two-sorted-arrays.html">
+            
+                <a href="../bs/median-of-two-sorted-arrays.html">
+            
+                    
+                    Median of Two Sorted Arrays
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../bt/summary.html">
+            
+                <a href="../bt/summary.html">
+            
+                    
+                    Binary Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../bt/binary-tree-in-order-traversal.html">
+            
+                <a href="../bt/binary-tree-in-order-traversal.html">
+            
+                    
+                    In Order Traversal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../bt/lowest-common-ancestor.html">
+            
+                <a href="../bt/lowest-common-ancestor.html">
+            
+                    
+                    Lowest Common Ancestor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../bt/binary-tree-zigzag-level-order-traversal.html">
+            
+                <a href="../bt/binary-tree-zigzag-level-order-traversal.html">
+            
+                    
+                    Zigzag LevelOrder Traversal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../bt/construct-binary-tree-from-inorder-and-postorder-traversal.html">
+            
+                <a href="../bt/construct-binary-tree-from-inorder-and-postorder-traversal.html">
+            
+                    
+                    Construct from Inorder and Post order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../bt/construct-binary-tree-from-inorder-and-preorder-traversal.html">
+            
+                <a href="../bt/construct-binary-tree-from-inorder-and-preorder-traversal.html">
+            
+                    
+                    Construct from Inorder and Pre order
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../dfs/introduction.html">
+            
+                <a href="../dfs/introduction.html">
+            
+                    
+                    DFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../dfs/permutation-combination.html">
+            
+                <a href="../dfs/permutation-combination.html">
+            
+                    
+                    Permutation/Combination
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../dfs/combination-sum.html">
+            
+                <a href="../dfs/combination-sum.html">
+            
+                    
+                    Combination Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../dfs/generate-parenthese.html">
+            
+                <a href="../dfs/generate-parenthese.html">
+            
+                    
+                    Generate Parenthese
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../dfs/n-queens.html">
+            
+                <a href="../dfs/n-queens.html">
+            
+                    
+                    N-Queens
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../dfs/sudoku-solver.html">
+            
+                <a href="../dfs/sudoku-solver.html">
+            
+                    
+                    Sudoku Solver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../dfs/word-break-ii.html">
+            
+                <a href="../dfs/word-break-ii.html">
+            
+                    
+                    Word Break II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../dfs/word-search.html">
+            
+                <a href="../dfs/word-search.html">
+            
+                    
+                    Word Search
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    BFS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../bfs/anagrams.html">
+            
+                <a href="../bfs/anagrams.html">
+            
+                    
+                    Anagrams
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../bfs/word-ladder.html">
+            
+                <a href="../bfs/word-ladder.html">
+            
+                    
+                    Word Ladder
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="LIS-LCS.html">
+            
+                <a href="LIS-LCS.html">
+            
+                    
+                    LIS/LCS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="decode-ways.html">
+            
+                <a href="decode-ways.html">
+            
+                    
+                    Decode Ways
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="word-break.html">
+            
+                <a href="word-break.html">
+            
+                    
+                    Word Break
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="distinct-subsequences.html">
+            
+                <a href="distinct-subsequences.html">
+            
+                    
+                    Distinct Subsequences
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="interleaving-string.html">
+            
+                <a href="interleaving-string.html">
+            
+                    
+                    Interleaving String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="jump-game.html">
+            
+                <a href="jump-game.html">
+            
+                    
+                    Jump Game
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="maximum-subarray.html">
+            
+                <a href="maximum-subarray.html">
+            
+                    
+                    Maximum Subarray
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="min-path-sum.html">
+            
+                <a href="min-path-sum.html">
+            
+                    
+                    Min Path Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="palindrome-partition-ii.html">
+            
+                <a href="palindrome-partition-ii.html">
+            
+                    
+                    Palindrome Partition II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9.11" data-path="pascal-triangle.html">
+            
+                <a href="pascal-triangle.html">
+            
+                    
+                    Pascal Triangle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="set-zero-to-matrix.html">
+            
+                <a href="set-zero-to-matrix.html">
+            
+                    
+                    Set Zero to Matrix
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="triangle.html">
+            
+                <a href="triangle.html">
+            
+                    
+                    Triangle
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.14" data-path="wildcard-matching.html">
+            
+                <a href="wildcard-matching.html">
+            
+                    
+                    Wild Card Match
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Misc
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../misc/two-sum.html">
+            
+                <a href="../misc/two-sum.html">
+            
+                    
+                    Two Sum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../misc/valid-number.html">
+            
+                <a href="../misc/valid-number.html">
+            
+                    
+                    Valid Number
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../misc/print-matrix-diagonally">
+            
+                <span>
+            
+                    
+                    Print Matrix Diagonally
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Pascal Triangle</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p><a href="https://oj.leetcode.com/problems/pascals-triangle/" target="_blank">Pascal&apos;s Triangle</a><br>Given numRows, generate the first numRows of Pascal&apos;s triangle.</p>
+</blockquote>
+<p>For example, given numRows = 5,
+Return</p>
+<pre><code>[
+     [1],
+    [1,1],
+   [1,2,1],
+  [1,3,3,1],
+ [1,4,6,4,1]
+]
+</code></pre><p>&#x601D;&#x8DEF;&#xFF1A;<br>&#x9996;&#x5148;&#x89C2;&#x5BDF;&#x4E00;&#x4E0B;&#x4E09;&#x89D2;&#x5F62;&#x7684;&#x751F;&#x6210;&#x89C4;&#x5F8B;&#x3002;
+&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;G<a href="0">n-1</a> ~ G<a href="n-2">n-1</a>, &#x6211;&#x4EEC;&#x60F3;&#x8981;&#x751F;&#x6210;G<a href="0">n</a> ~ G<a href="n%20-%201">n</a>
+&#x90A3;&#x4E48;&#x901A;&#x8FC7;&#x89C2;&#x5BDF;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x5982;&#x4E0B;&#x89C4;&#x5219;&#xFF1A;</p>
+<pre><code>G[n](0) = G[n-1](0)  = 1
+G[n ](n - 1) = G[n - 1](n - 2) = 1
+&#x5BF9;&#x4E8E;&#x4EFB;&#x4F55;i &#x5C5E;&#x4E8E;[1, n-2],
+G[n](i) = G[n - 1](i &#xFF0D; 1) + G[n - 1](i)&#x3002;
+</code></pre><p>&#x5B8C;&#x6574;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">public</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt; generate(<span class="hljs-keyword">int</span> numRows) {
+        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;ArrayList&lt;Integer&gt;&gt;();
+        <span class="hljs-keyword">if</span> (numRows &lt; <span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">return</span> result;
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; numRows; i++) {
+            ArrayList&lt;Integer&gt; temp = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+            temp.add(<span class="hljs-number">1</span>);
+            <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; result.get(i - <span class="hljs-number">1</span>).size() - <span class="hljs-number">1</span>; j++) {
+                    temp.add(result.get(i - <span class="hljs-number">1</span>).get(j) + result.get(i - <span class="hljs-number">1</span>).get(j + <span class="hljs-number">1</span>));
+                }
+                temp.add(<span class="hljs-number">1</span>);
+            }
+            result.add(temp);
+        }
+
+        <span class="hljs-keyword">return</span> result;
+    }
+}
+</code></pre>
+<p>&#x76F8;&#x4F3C;&#x95EE;&#x9898;<a href="https://oj.leetcode.com/problems/pascals-triangle-ii/" target="_blank">Pascal&apos;s Triangle II</a>&#x7ED9;&#x5B9A;K&#xFF0C; &#x53EA;&#x9700;&#x8981;&#x6C42;&#x51FA;&#x7B2C;kth&#x884C;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ArrayList&lt;Integer&gt; <span class="hljs-title">getRow</span><span class="hljs-params">(<span class="hljs-keyword">int</span> rowIndex)</span> </span>{
+        <span class="hljs-keyword">if</span> (rowIndex &lt; <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">null</span>;
+        }
+
+        <span class="hljs-keyword">int</span>[] array = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[rowIndex + <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; rowIndex + <span class="hljs-number">1</span>; i++) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i; j &gt;= <span class="hljs-number">0</span>; j--) {
+                <span class="hljs-keyword">if</span> (j == <span class="hljs-number">0</span> || j == i) {
+                    array[j] = <span class="hljs-number">1</span>;
+                }<span class="hljs-keyword">else</span> {
+                    array[j] += array[j - <span class="hljs-number">1</span>];
+                }
+            }
+        }
+
+        <span class="hljs-comment">//convert result to list </span>
+        ArrayList&lt;Integer&gt; result = <span class="hljs-keyword">new</span> ArrayList&lt;Integer&gt;();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span> ; i &lt; array.length; i++) {
+            result.add(array[i]);
+        }
+        <span class="hljs-keyword">return</span> result;
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="palindrome-partition-ii.html" class="navigation navigation-prev " aria-label="Previous page: Palindrome Partition II">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="set-zero-to-matrix.html" class="navigation navigation-next " aria-label="Next page: Set Zero to Matrix">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Pascal Triangle","level":"1.9.11","depth":2,"next":{"title":"Set Zero to Matrix","level":"1.9.12","depth":2,"path":"dp/set-zero-to-matrix.md","ref":"dp/set-zero-to-matrix.md","articles":[]},"previous":{"title":"Palindrome Partition II","level":"1.9.10","depth":2,"path":"dp/palindrome-partition-ii.md","ref":"dp/palindrome-partition-ii.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["disqus"],"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"dianwen"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dp/pascal-triangle.md","mtime":"2016-10-30T04:10:50.791Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2016-10-30T04:12:12.416Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
